@@ -1,3 +1,34 @@
 jar
-1. creat jar package
+1. What is a JAR?
+A JAR (Java ARchive) is a package file format typically used to aggregate many Java class files and associated metadata and resources
+(text, images, etc.) into one file for distribution.
+JAR files are archive files that include a Java-specific manifest file. 
+They are built on the ZIP format and typically have a .jar file extension.
+
+2. Commands
+-c: create
+-t: display the content of jar
+-x: decompress jar file
+-u: add file into jar
+-f: assign the name of jar
+-v: generate detailed report and output to standard device
+-m: assign manifest.mf file. In manifest.mf file, there are some settings of jar
+-0: do not compress the content when generating jar
+-M: do not generate Manifest.mf. It will fail the -m parameter
+-l: genrate index file for jar
+-C: execute jar command under a directory. cd somepath; jar ...
+
+1). creat jar package
 jar cf hello.jar HelloWorld.class
+
+2). create and display the process
+jar cvf hello.jar HelloWorld.class
+
+3). display jar 
+jar tvf hello.jar
+
+4). decompress jar
+jar xvf hello.jar
+
+5). add file to jar
+jar uf hello.jar HelloWorld.java
