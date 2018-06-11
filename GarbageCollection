@@ -1,0 +1,12 @@
+1. Java Garbage Collection Mechnism
+Most JVMs have implemented Garbage Collection Mechnism to manage the stack memory automatically. 
+In Java, every object is seen as an object of the Object class, and it has a finalize() method. 
+This method would be called after the garbage collector (GC) confirms that the object's memory should be collected, while before the collection. 
+So programmer can add their own operations in this method. 
+
+Besides, programmers can call the gc() method in java.lang.System to request to start a garbage collection thread. [System.gc()]
+However, the real start point of garbage collection is decided by the algorithm of JVM. 
+
+The gc() method in java.lang.Runtime() has the same effect as System.gc(). 
+But Runtime is a singleton class, so we need to run getRuntime() to get its instance, and then call gc() method.
+[Runtime.getRuntime().gc()]
